@@ -11,6 +11,10 @@
 		078505A02CCFF7F800909A4E /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0785059F2CCFF7F800909A4E /* ContentView.swift */; };
 		078505A22CCFF7FA00909A4E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 078505A12CCFF7FA00909A4E /* Assets.xcassets */; };
 		078505A52CCFF7FA00909A4E /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 078505A42CCFF7FA00909A4E /* Preview Assets.xcassets */; };
+		078505AE2CCFFA8100909A4E /* CityDetails.swift in Sources */ = {isa = PBXBuildFile; fileRef = 078505AD2CCFFA8000909A4E /* CityDetails.swift */; };
+		078505B22CD1323B00909A4E /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 078505B12CD1323B00909A4E /* NetworkManager.swift */; };
+		078505B52CD1338F00909A4E /* CityRepo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 078505B42CD1338F00909A4E /* CityRepo.swift */; };
+		078505B82CD133F900909A4E /* CityViewmodel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 078505B72CD133F900909A4E /* CityViewmodel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -19,6 +23,10 @@
 		0785059F2CCFF7F800909A4E /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		078505A12CCFF7FA00909A4E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		078505A42CCFF7FA00909A4E /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		078505AD2CCFFA8000909A4E /* CityDetails.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CityDetails.swift; sourceTree = "<group>"; };
+		078505B12CD1323B00909A4E /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
+		078505B42CD1338F00909A4E /* CityRepo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CityRepo.swift; sourceTree = "<group>"; };
+		078505B72CD133F900909A4E /* CityViewmodel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CityViewmodel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -51,6 +59,10 @@
 		0785059C2CCFF7F800909A4E /* CityDetails */ = {
 			isa = PBXGroup;
 			children = (
+				078505B62CD133EB00909A4E /* Viewmodels */,
+				078505B32CD1338200909A4E /* Repositories */,
+				078505B02CCFFE2800909A4E /* NetworkManager */,
+				078505AC2CCFFA7200909A4E /* Models */,
 				0785059D2CCFF7F800909A4E /* CityDetailsApp.swift */,
 				0785059F2CCFF7F800909A4E /* ContentView.swift */,
 				078505A12CCFF7FA00909A4E /* Assets.xcassets */,
@@ -67,6 +79,38 @@
 			path = "Preview Content";
 			sourceTree = "<group>";
 		};
+		078505AC2CCFFA7200909A4E /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				078505AD2CCFFA8000909A4E /* CityDetails.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		078505B02CCFFE2800909A4E /* NetworkManager */ = {
+			isa = PBXGroup;
+			children = (
+				078505B12CD1323B00909A4E /* NetworkManager.swift */,
+			);
+			path = NetworkManager;
+			sourceTree = "<group>";
+		};
+		078505B32CD1338200909A4E /* Repositories */ = {
+			isa = PBXGroup;
+			children = (
+				078505B42CD1338F00909A4E /* CityRepo.swift */,
+			);
+			path = Repositories;
+			sourceTree = "<group>";
+		};
+		078505B62CD133EB00909A4E /* Viewmodels */ = {
+			isa = PBXGroup;
+			children = (
+				078505B72CD133F900909A4E /* CityViewmodel.swift */,
+			);
+			path = Viewmodels;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -77,6 +121,7 @@
 				078505962CCFF7F800909A4E /* Sources */,
 				078505972CCFF7F800909A4E /* Frameworks */,
 				078505982CCFF7F800909A4E /* Resources */,
+				078505AF2CCFFDCD00909A4E /* Run Script */,
 			);
 			buildRules = (
 			);
@@ -132,13 +177,38 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		078505AF2CCFFDCD00909A4E /* Run Script */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			name = "Run Script";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# Type a script or drag a script file from your workspace to insert its path.\nif which swiftlint >/dev/null; then\n    swiftlint\nelse\n    echo \"warning: SwiftLint not installed, download from https://github.com/realm/SwiftLint\"\nfi\n";
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		078505962CCFF7F800909A4E /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				078505B22CD1323B00909A4E /* NetworkManager.swift in Sources */,
 				078505A02CCFF7F800909A4E /* ContentView.swift in Sources */,
+				078505B52CD1338F00909A4E /* CityRepo.swift in Sources */,
+				078505AE2CCFFA8100909A4E /* CityDetails.swift in Sources */,
 				0785059E2CCFF7F800909A4E /* CityDetailsApp.swift in Sources */,
+				078505B82CD133F900909A4E /* CityViewmodel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -2,7 +2,7 @@
 //  CityDetailsApp.swift
 //  CityDetails
 //
-//  Created by Deeksha Verma on 28/10/24.
+//  Created Akash on 28/10/24.
 //
 
 import SwiftUI
@@ -11,7 +11,7 @@ import SwiftUI
 struct CityDetailsApp: App {
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            CityView()
         }
     }
 }
